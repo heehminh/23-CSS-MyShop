@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+
+.sidebar {
+    width: 170px;
+    height: 100%;
+}
+
+.mainMenu {
+    background-color: orange;
+    border-radius: 5px;
+    padding: 10px 5px;
+}
+
+.mainMenu ul {
+    padding: 0;
+    display: block;
+}
+
+.mainMenu ul li {
+    list-style: none;
+    cursor: pointer;
+}
+
+.mainMenu ul li a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 20px;   
+    padding: 10px;
+}
+
+
+.writeBtnBox {
+    margin-top: 10px;
+}
+
+.writeBtn {
+    width: 100%;
+    color: white;
+    background: black;
+    border: 1px solid black;
+    padding: 10px 20px;
+    text-align: left;
+    font-size: 16px;
+    cursor:  pointer;
+}
+
+.writeBtnBox .arrow {
+    display: inline-block;
+    padding-left: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.writeBtn:hover {
+    background: white;
+    color: black;
+}
+
+.writeBtn:hover .arrow {
+    transform: translateX(50px);
+}
