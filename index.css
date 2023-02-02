@@ -95,11 +95,6 @@ html, body {
     transition: all 0.3s ease-in-out;
 }
 
-.mainMenu ul li a:hover {
-    padding-left: 20px;
-    background: rgb(255, 145, 0);
-}
-
 
 .writeBtnBox {
     margin-top: 10px;
@@ -121,15 +116,6 @@ html, body {
     /* inline 요소에는 적용되지 않는다. inline-block으로 바꿔주기 */
     padding-left: 10px;
     transition: all 0.3s ease-in-out;
-}
-
-.writeBtn:hover {
-    background: white;
-    color: #333333;
-}
-
-.writeBtn:hover .arrow {
-    transform: translateX(50px);
 }
 
 .itemWrap {
@@ -208,34 +194,155 @@ html, body {
     z-index: 2;
     opacity: 0;
 }
-.item:hover:after {
-    opacity: 1;
+
+
+
+@media screen and (max-width: 767px) {
+    /* mobile */
+    .mainBanner {
+        width: 100%;
+        height: 160px;
+    }
+
+    .mainBanner .text {
+        font-size: 26px;
+    }
+    
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .wrapper {
+        width: 100%;
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: 45px;
+    }
+
+    .mainMenu {
+        border-radius: 0px;
+        padding: 0px;
+        height: 100%;
+    }
+
+    .mainMenu ul {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        padding: 0px;
+        margin: 0;
+        align-items: center;
+    }
+
+    .writeBtnBox {
+        display: none;
+    }
+
+    .itemWrap {
+        width: 100%;
+        padding: 10px;
+    }
+
+    img {
+        overflow: clip;
+        border-radius: 10px;
+    }
+
+    .item {
+        width: calc(50% - 7px);
+        display: flex;
+        flex-direction: column;
+        overflow: visible;
+        border: 1px solid gray;
+    }
+
+    .textBox {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 10px 15px 12px;
+    }
+
+    .textBox p {
+        color: black;
+    }
+
+    .textBox__name {
+        opacity: 1;
+        transform: translateY(0);
+        font-size: 20px;
+    }
+
+    .textBox__price {
+        opacity: 1;
+        transform: translateY(0);
+        font-size: 14px;
+    }
+
 }
 
-.item:hover .textBox__name {
-    opacity: 1;
-    transform: translateY(0);
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* tablet  */
+    
 }
 
-.item:hover .textBox__price {
-    opacity: 1;
-    transform: translateY(0);
+/* 1024px보다 viewport가 큰 경우 기본 css 적용 */
+
+@media screen and (min-width: 1024px) {
+    /* hover 효과는 PC에서만 적용 */
+    .mainMenu ul li a:hover {
+        padding-left: 20px;
+        background: rgb(255, 145, 0);
+    }
+
+    .writeBtn:hover {
+        background: white;
+        color: #333333;
+    }
+
+    .writeBtn:hover .arrow {
+        transform: translateX(50px);
+    }
+    
+    .item:hover:after {
+        opacity: 1;
+    }
+    
+    .item:hover .textBox__name {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .item:hover .textBox__price {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .item:hover .imgBox img {
+        transform: scale(1.1);
+        filter: blur(3px);
+    }
+
+    .item:after, 
+    .item .imgBox .img,
+    .item .textBox__name,
+    .item .textBox__price {
+        transition: all 0.4s ease-in-out;
+    }
+
+    .item .textBox__price {
+        transition: all 0.4s ease-in-out 0.15s;
+    }
+
+    
+
+    
 }
-
-.item:hover .imgBox img {
-    transform: scale(1.1);
-    filter: blur(3px);
-}
-
-.item:after, 
-.item .imgBox .img,
-.item .textBox__name,
-.item .textBox__price {
-    transition: all 0.4s ease-in-out;
-}
-
-.item .textBox__price {
-    transition: all 0.4s ease-in-out 0.15s;
-}
-
-
