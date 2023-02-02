@@ -253,7 +253,7 @@ html, body {
 
     img {
         overflow: clip;
-        border-radius: 10px;
+        border-radius: 10px 10px 0px 0px;
     }
 
     .item {
@@ -291,6 +291,39 @@ html, body {
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     /* tablet  */
+    img {
+        overflow: clip;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .item {
+        flex-direction: column;
+        overflow: visible;
+        border: 1px solid gray;
+    }
+
+    .textBox {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 10px 15px 12px;
+    }
+
+    .textBox p {
+        color: black;
+    }
+
+    .textBox__name {
+        opacity: 1;
+        transform: translateY(0);
+        font-size: 20px;
+    }
+
+    .textBox__price {
+        opacity: 1;
+        transform: translateY(0);
+        font-size: 14px;
+    }
     
 }
 
