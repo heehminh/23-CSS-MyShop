@@ -49,8 +49,18 @@ html, body {
 .container {
     width: 100%;
     display: flex;
+    justify-content: center;
+    
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1320px;
+    display: flex;
     flex-direction: row;
     padding: 20px 10px;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
 .sidebar {
@@ -62,7 +72,7 @@ html, body {
 .mainMenu {
     background-color: orange;
     border-radius: 5px;
-    padding: 10px 5px;
+    padding: 10px 15px;
 }
 
 .mainMenu ul {
@@ -75,13 +85,19 @@ html, body {
     cursor: pointer;
 }
 
-.mainMenu ul li a{
+.mainMenu ul li a {
     display: block;
     color: white;
     text-decoration: none;
     font-size: 16px;
     border-radius: 20px;   
     padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.mainMenu ul li a:hover {
+    padding-left: 20px;
+    background: rgb(255, 145, 0);
 }
 
 
@@ -102,13 +118,14 @@ html, body {
 
 .writeBtnBox .arrow {
     display: inline-block;
+    /* inline 요소에는 적용되지 않는다. inline-block으로 바꿔주기 */
     padding-left: 10px;
-    transition: transform 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .writeBtn:hover {
     background: white;
-    color: black;
+    color: #333333;
 }
 
 .writeBtn:hover .arrow {
@@ -116,6 +133,7 @@ html, body {
 }
 
 .itemWrap {
+    width: calc(100% - 170px);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
